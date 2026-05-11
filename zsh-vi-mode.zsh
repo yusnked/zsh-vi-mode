@@ -1403,6 +1403,7 @@ function zvm_default_handler() {
             case $? in
               $ZVM_RANGE_HANDLER_RET_OK)
                 # The range action is handled successfully and exit
+                zvm_postpone_reset_prompt false
                 break
                 ;;
               $ZVM_RANGE_HANDLER_RET_CONTINUE)
